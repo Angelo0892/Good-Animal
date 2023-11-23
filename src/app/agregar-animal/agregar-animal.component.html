@@ -1,0 +1,80 @@
+<!--
+<form (ngSubmit)="agregarAnimal()">
+    <input type="text" placeholder="Nombre" [(ngModel)]="nuevoAnimal.nombre" name="nombreAnimal">
+    <input type="text" placeholder="Cuidado" [(ngModel)]="nuevoAnimal.cuidado" name="cuidadoAnimal">
+    <input type="text" placeholder="Origen" [(ngModel)]="nuevoAnimal.origen" name="origenAnimal">
+    <button type="submit">Agregar</button>
+</form>
+-->
+
+
+<section class="container">
+
+    <section class="row col-12 section_form">
+        <div class="col-lg-8">
+            <div class="col-lg-12 section_title mb-3">
+                <h4>AGREGANDO ANIMAL</h4>
+            </div>
+            
+            <form action="post" class="col-lg-12 form_main">
+
+                <!--
+                  <div>
+                    <img [src]="archivos[0]" alt="">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">IMAGEN:</label>
+                    <input (change)="capturarArchivo($event)" type="file">
+                    <img *ngIf="uploadedImage" [src]="uploadedImage" alt="Imagen cargada">
+                </div>
+                -->
+                
+                
+
+                <div class="mb-3">
+                    <label class="form-label">ANIMAL:</label>
+                    <input type="text" class="form-control" name="animal" id="animal" [(ngModel)]="nuevoAnimal.nombre">
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label">INFORMACIÓN DEL ANIMAL:</label>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="" value="cudidado">
+                            <label class="form-check-label">Cuidado</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="" name="" value="lugar">
+                            <label class="form-check-label">Lugar de origen</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">CUIDADOS DEL ANIMAL:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="cuidados" id="cuidados" [(ngModel)]="nuevoAnimal.cuidado"></textarea>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">LUGAR DE ORIGEN:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="origen" id="origen" [(ngModel)]="nuevoAnimal.origen"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="button" (click)="agregarAnimal()">Agregar</button>    
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <div *ngFor="let animal of mostrarAnimales; let i=index">
+            {{i+1}} {{animal.nombre}} {{animal.cuidado}} {{animal.origen}}
+        </div>
+      </div>
+    </div>
+</section>
+
+    
+
