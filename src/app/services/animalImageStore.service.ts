@@ -7,7 +7,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class StoreService {
 
-  constructor(private storage: AngularFireStorage) { }
+  constructor(private storage: AngularFireStorage) {}
 
   uploadImage(file: File): Promise<string> {
     const filePath = `images/${Date.now()}_${file.name}`;

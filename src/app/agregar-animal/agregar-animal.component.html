@@ -18,18 +18,11 @@
             
             <form action="post" class="col-lg-12 form_main">
 
-                <!--
-                  <div>
-                    <img [src]="archivos[0]" alt="">
-                </div>
+
                 <div class="mb-3">
                     <label class="form-label">IMAGEN:</label>
                     <input (change)="capturarArchivo($event)" type="file">
-                    <img *ngIf="uploadedImage" [src]="uploadedImage" alt="Imagen cargada">
-                </div>
-                -->
-                
-                
+                </div>                
 
                 <div class="mb-3">
                     <label class="form-label">ANIMAL:</label>
@@ -66,11 +59,11 @@
             </form>
         </div>
     </section>
-    
+
     <div class="row">
       <div class="col-lg-12">
         <div *ngFor="let animal of mostrarAnimales; let i=index">
-            {{i+1}} {{animal.nombre}} {{animal.cuidado}} {{animal.origen}}
+            {{i+1}} {{animal.nombre}} <!-- {{animal.cuidado}} {{animal.origen}} -->
         </div>
       </div>
     </div>

@@ -1,1 +1,23 @@
-<p>catalogo-animal works!</p>
+<section class="row sections_cards">
+
+    <section class="row section_sub">
+        <div class="linea_sub col-10 col-lg-10">
+      
+        </div>
+        <div class="col-10 col-lg-8">
+          <h4 class="m-4">Catalogo</h4>
+        </div>
+    </section>
+    
+    <section class="card_novelty col-12 row">
+
+        <div class="col-lg-2 col-sm-6 my-2 card_space" *ngFor="let animal of mostrarAnimales; let i = index">
+            <img [src]="animal.imagenUrl" class="card_image object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card_title">{{animal.nombre}}</h5>
+              <a [routerLink]="['/datosAnimal', i]" class="button_card">Ver</a>
+            </div>
+        </div>
+
+    </section>
+</section>

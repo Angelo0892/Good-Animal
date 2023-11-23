@@ -132,6 +132,9 @@
     border: 5px solid #FFE5F0;
     border-radius: 5px;
     margin: 0;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
 }
 
 .card_title{
@@ -209,6 +212,29 @@
     justify-content: center;
     color: #c999af;
     text-align: center;
+}
+
+.imagen_animal{
+    justify-content: center;
+    text-align: center;
+    background-color: rgb( 25%, 255, 229, 240);
+    height: 300px;
+    object-fit: cover;
+}
+
+._imagen{
+    border-color: #C999AF;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    height: 300px;
+}
+
+@media (600px >= width) {
+    ._imagen, .imagen_animal{
+        height: 200px;
+    }
+
 }
 
 .sub_titulo{

@@ -3,5 +3,6 @@ export interface Animal {
     nombre: string;
     cuidado: string;
     origen: string;
+    imagenUrl: string;
 }
   

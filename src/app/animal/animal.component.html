@@ -1,0 +1,27 @@
+<section class="row section_sub my-5">
+    <div class="linea_sub col-10 col-lg-10"></div>
+    <div class="col-10 col-lg-8">
+      <h4 class="m-4">{{animal.nombre}}</h4>
+    </div>
+</section>
+
+<section class="imagen_animal col-lg-12">
+    
+      <img [src]="animal.imagenUrl" class="_imagen" alt="...">
+    
+</section>
+
+<section class="card_novelty col-12 row">
+
+    <section class="text_index row my-5">
+  
+      <div class="col-lg-3 col-sm-1 col-1"></div>
+      <div class="col-lg-6 col-sm-10 col-10">
+          <h4 class="sub_titulo">Cuidados</h4>
+          <p>{{animal.cuidado}}</p>
+          <h4 class="sub_titulo">Origen</h4>
+          <p>{{animal.origen}}</p>
+      </div>
+    </section>
+  
+</section>

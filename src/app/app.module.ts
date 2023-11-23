@@ -21,11 +21,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogoAnimalComponent } from './catalogo-animal/catalogo-animal.component';
 import { NoticiaAnimalComponent } from './noticia-animal/noticia-animal.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { AnimalComponent } from './animal/animal.component';
 
 const appRoutes:Routes=[
   {path:'', component:IndexComponent},
   {path:'catalogo', component:CatalogoAnimalComponent},
-  //{path:'datosAnimal/:id', component:AnimalesComponent},
+  {path:'datosAnimal/:id', component:AnimalComponent},
   {path:'noticias', component:NoticiaAnimalComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'agregar_animal', component:AgregarAnimalComponent},
@@ -41,7 +42,8 @@ const appRoutes:Routes=[
     IndexComponent,
     CatalogoAnimalComponent,
     NoticiaAnimalComponent,
-    ContactoComponent
+    ContactoComponent,
+    AnimalComponent
   ],
   imports: [
     BrowserModule,
